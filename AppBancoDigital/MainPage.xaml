@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.MainPage">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu">
+            <StackLayout BackgroundColor="White">
+                <Label Text="" />
+                <Label Text="BANCO DIGITAL" FontSize="25" HorizontalTextAlignment="Center" TextColor="#00BFFF" FontAttributes="Bold"/>
+
+                <Button x:Name="botao_logout" Clicked="botao_logout_Clicked" Text="Sair da conta" Style="{StaticResource BotaoLogout}"/>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+</MasterDetailPage>

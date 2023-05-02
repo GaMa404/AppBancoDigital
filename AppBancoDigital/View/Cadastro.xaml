@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Cadastro"
+             BackgroundColor="#00BFFF">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Label Text="BANCO DIGITAL" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="White" />
+
+            <Frame>
+                <Grid RowDefinitions="*, *, *, *, *, *, *">
+                    <Label Text="CADASTRO" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" />
+
+                    <Label Text="CPF" FontSize="25" Grid.Row="1" TextColor="White"/>
+                    <Entry x:Name="usuario" Placeholder="Digite seu CPF" Keyboard="Numeric" Grid.Row="2" PlaceholderColor="White" TextColor="White"/>
+
+                    <Label Text="Senha" FontSize="25" Grid.Row="3" TextColor="White"/>
+                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="4" IsPassword="True" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

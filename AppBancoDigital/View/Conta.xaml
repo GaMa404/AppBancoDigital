@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Conta">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <Frame BackgroundColor="#00BFFF">
+                <StackLayout>
+                    <Label Text="Olá, Nome Sobrenome" FontSize="25" TextColor="White" />
+                    <Image x:Name="propaganda" HeightRequest="100" WidthRequest="100"/>
+                </StackLayout>
+                
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

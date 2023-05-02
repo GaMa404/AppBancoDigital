@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--  TELA DO LOGIN ===============================================================================-->
+            
+            <Style x:Key="BotaoEntrar_Esqueci" TargetType="Button">
+                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="BorderWidth" Value="100" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            
+            <!-- TELA MENU HAMBURGUER ========================================================================= -->
+            <Style x:Key="BotaoLogout" TargetType="Button">
+                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="BorderWidth" Value="100" />
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+        
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
