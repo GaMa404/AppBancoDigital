@@ -19,10 +19,26 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Assets\Fontes\REBOG-BlackPersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />
+    <None Remove="Assets\Fontes\REBOG-ThinPersonalUse.otf" />
     <None Remove="View\cartao.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-BlackPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-BoldPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-PersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\Fontes\REBOG-ThinPersonalUse.otf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\cartao.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -31,6 +47,7 @@
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
+    <PackageReference Include="Xamarin.Forms.MaskedEntry" Version="1.1.0" />
   </ItemGroup>
 
   <ItemGroup>

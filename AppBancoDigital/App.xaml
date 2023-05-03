@@ -8,14 +8,33 @@
             <!--  TELA DO LOGIN ===============================================================================-->
             
             <Style x:Key="BotaoEntrar_Esqueci" TargetType="Button">
-                <Setter Property="CornerRadius" Value="50" />
+                <Setter Property="CornerRadius" Value="10" />
                 <Setter Property="BorderWidth" Value="100" />
-                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="TextColor" Value="#4F4F4F" />
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BackgroundColor" Value="White" />
             </Style>
+
+            <Style x:Key="TextoTitulo_Login" TargetType="Label">
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="fonte_negrito" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+            </Style>
+
+            <Style x:Key="TextoCPF_Senha" TargetType="Entry">
+                <Setter Property="FontSize" Value="25" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontFamily" Value="fonte_padrao" />
+            </Style>
+
+            <Style x:Key="EntryCpf_Senha" TargetType="Entry">
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="White" />
+            </Style>
             
             <!-- TELA MENU HAMBURGUER ========================================================================= -->
+            
             <Style x:Key="BotaoLogout" TargetType="Button">
                 <Setter Property="CornerRadius" Value="50" />
                 <Setter Property="BorderWidth" Value="100" />

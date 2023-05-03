@@ -3,15 +3,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Conta">
     <ContentPage.Content>
-        <StackLayout>
-            
-            <Frame BackgroundColor="#00BFFF">
-                <StackLayout>
-                    <Label Text="Olá, Nome Sobrenome" FontSize="25" TextColor="White" />
-                    <Image x:Name="propaganda" HeightRequest="100" WidthRequest="100"/>
+        <StackLayou>
+
+            <Frame BackgroundColor="#00BFFF" Padding="0, 0, 0, 0">
+                <StackLayout HeightRequest="250">
+                    <Label Text="Olá, Nome Sobrenome" FontSize="25" TextColor="White" Margin="10, 0, 0, 0" />
+                    <Frame BackgroundColor="#87CEFA" Margin="5" Padding="5" CornerRadius="50">
+                        <ImageButton x:Name="propaganda" CornerRadius="50" Aspect="Fill" />
+                    </Frame>
+                    <Label Text="Adquira agora seu cartão aproximação!" FontSize="15" TextColor="White" HorizontalTextAlignment="Center"/>
                 </StackLayout>
-                
             </Frame>
-        </StackLayout>
+
+            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="30">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Saldo: R$ " />
+                        <Span Text="Binding Saldo" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </StackLayou
+            
+            t>
     </ContentPage.Content>
 </ContentPage>

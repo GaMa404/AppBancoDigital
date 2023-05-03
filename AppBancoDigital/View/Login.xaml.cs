@@ -15,6 +15,8 @@ namespace AppBancoDigital.View
         public Login()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private void btn_entrar_Clicked(object sender, EventArgs e)
@@ -22,7 +24,7 @@ namespace AppBancoDigital.View
             string cpf_digitado = usuario.Text;
             string senha_digitada = senha.Text;
 
-            string cpf_cadastrado = "12345678910";
+            string cpf_cadastrado = "123.456.789-10";
             string senha_cadastrada = "teste";
 
             if (cpf_digitado == cpf_cadastrado && senha_digitada == senha_cadastrada)
