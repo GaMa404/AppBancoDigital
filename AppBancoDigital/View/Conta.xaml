@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Conta">
     <ContentPage.Content>
-        <StackLayou>
+        <StackLayout>
 
             <Frame BackgroundColor="#00BFFF" Padding="0, 0, 0, 0">
                 <StackLayout HeightRequest="250">
@@ -23,8 +23,6 @@
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
-        </StackLayou
-            
-            t>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

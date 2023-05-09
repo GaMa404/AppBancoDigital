@@ -7,7 +7,7 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" Spacing="50">
             
-            <Label Text="BANCO DIGITAL" FontSize="40" Style="{StaticResource TextoTitulo_Login}"/>
+            <Label Text="MV BANK" FontSize="40" Style="{StaticResource TextoTitulo_Login}"/>
 
             <Frame BackgroundColor="Transparent" BorderColor="White" Margin="20, 20, 20, 0" CornerRadius="15">
                 <Grid RowDefinitions="*, *, *, *, *, *, *">
