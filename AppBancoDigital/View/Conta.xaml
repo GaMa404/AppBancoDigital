@@ -7,7 +7,15 @@
 
             <Frame BackgroundColor="#00BFFF" Padding="0, 0, 0, 0">
                 <StackLayout HeightRequest="250">
-                    <Label Text="Olá, Nome Sobrenome" FontSize="25" TextColor="White" Margin="10, 0, 0, 0" />
+                    <Label FontSize="25" TextColor="White" Margin="10, 0, 0, 0">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Olá, "/>
+                                <Span Text="{Binding Nome}" />
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+                    
                     <Frame BackgroundColor="#87CEFA" Margin="5" Padding="5" CornerRadius="50">
                         <ImageButton x:Name="propaganda" CornerRadius="50" Aspect="Fill" />
                     </Frame>
@@ -19,10 +27,28 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Saldo: R$ " />
-                        <Span Text="Binding Saldo" />
+                        <Span Text="Bindar saldo" />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
+
+            <StackLayout>
+                <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="*, *" Margin="15">
+                    <ImageButton x:Name="imgbtn_pix" Grid.Column="0" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_pix_Clicked"/>
+                    <Label Text="Pix" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" HorizontalTextAlignment="Center"/>
+
+                    <ImageButton x:Name="imgbtn_pagar" Grid.Column="1" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_pagar_Clicked"/>
+                    <Label Text="Pagar" Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="Black" />
+
+                    <ImageButton x:Name="imgbtn_transferir" Grid.Column="2" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_transferir_Clicked"/>
+                    <Label Text="Transferir" Grid.Column="2"  Grid.Row="1" FontSize="20" TextColor="Black" />
+
+                    <ImageButton x:Name="imgbtn_depositar" Grid.Column="3" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_depositar_Clicked"/>
+                    <Label Text="Depositar" Grid.Column="3"  Grid.Row="1" FontSize="20" TextColor="Black" />
+                </Grid>
+            </StackLayout>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

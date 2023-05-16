@@ -23,6 +23,10 @@
     <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-ThinPersonalUse.otf" />
+    <None Remove="Imagens\boleto_icon.png" />
+    <None Remove="Imagens\depositar_icon.png" />
+    <None Remove="Imagens\pix_icon.png" />
+    <None Remove="Imagens\transferir_icon.png" />
     <None Remove="View\cartao.png" />
   </ItemGroup>
 
@@ -39,7 +43,19 @@
     <EmbeddedResource Include="Assets\Fontes\REBOG-ThinPersonalUse.otf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\cartao.png">
+    <EmbeddedResource Include="Imagens\boleto_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\cartao.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\depositar_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\pix_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imagens\transferir_icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
