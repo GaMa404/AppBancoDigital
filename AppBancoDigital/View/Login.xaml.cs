@@ -21,12 +21,16 @@ namespace AppBancoDigital.View
             InitializeComponent();
 
             NavigationPage.SetHasNavigationBar(this, false);
+
+            carregando.Color = Color.White;
         }
 
         private async void btn_entrar_Clicked(object sender, EventArgs e)
         {
             try
             {
+                carregando.IsRunning = true;
+
                 string[] cpf_pontuado = usuario.Text.Split('.', '-');
                 string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
                 string senha_digitada = senha.Text;
@@ -63,11 +67,20 @@ namespace AppBancoDigital.View
             {
                 await DisplayAlert("Ops", err.Message, "OK");
             }
+            finally
+            {
+                carregando.IsRunning = false;
+            }
         }
 
         private void btn_esqueci_Clicked(object sender, EventArgs e)
         {
+            //App.Current.MainPage = new NavigationPage(new View.EsqueciSenha());
+        }
 
+        private void btn_cadastrar_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new View.Cadastro());
         }
     }
 }

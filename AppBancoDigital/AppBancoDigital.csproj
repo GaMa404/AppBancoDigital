@@ -11,14 +11,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="View\Cadastro.xaml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Remove="View\Cadastro.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Assets\Fontes\REBOG-BlackPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-BoldPersonalUse.otf" />
     <None Remove="Assets\Fontes\REBOG-PersonalUse.otf" />
@@ -68,6 +60,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\Cadastro.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\Conta.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

@@ -9,12 +9,17 @@ using Xamarin.Forms.Xaml;
 
 namespace AppBancoDigital.View
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Cadastro : ContentPage
-    {
-        public Cadastro()
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class Cadastro : ContentPage
+	{
+		public Cadastro ()
+		{
+			InitializeComponent ();
+		}
+
+        private void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
-            InitializeComponent();
+
         }
     }
 }

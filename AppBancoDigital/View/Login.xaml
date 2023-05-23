@@ -5,25 +5,30 @@
              xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry"
              BackgroundColor="#00BFFF">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center" Spacing="50">
+        <StackLayout VerticalOptions="Center" Spacing="15">
             
             <Label Text="MV BANK" FontSize="40" Style="{StaticResource TextoTitulo_Login}"/>
 
+            <ActivityIndicator x:Name="carregando" IsRunning="False" />
+            
             <Frame BackgroundColor="Transparent" BorderColor="White" Margin="20, 20, 20, 0" CornerRadius="15">
                 <Grid RowDefinitions="*, *, *, *, *, *, *">
-                    <Label Text="LOGIN" Grid.Row="0" FontSize="30" Style="{StaticResource TextoTitulo_Login}" />
+                    <Label Text="LOGIN" Grid.Row="0" FontSize="30" Style="{StaticResource TextoTitulo_Login}"/>
 
-                    <Label Text="CPF" Grid.Row="1" Style="{StaticResource TextoCPF_Senha}"/>
+                    <Label Text="CPF" Grid.Row="1" Style="{StaticResource TextoCPF_Senha}" Margin="0, 30, 0, 0"/>
                     <control:MaskedEntry x:Name="usuario" Grid.Row="2" Placeholder="Digite seu CPF" Mask="XXX.XXX.XXX-XX" Keyboard="Numeric" Style="{StaticResource EntryCpf_Senha}" />
 
-                    <Label Text="Senha" Grid.Row="3" Style="{StaticResource TextoCPF_Senha}"/>
+                    <Label Text="Senha" Grid.Row="3" Style="{StaticResource TextoCPF_Senha}" Margin="0, 30, 0, 0"/>
                     <Entry x:Name="senha" Grid.Row="4" Placeholder="Digite sua senha" IsPassword="True" ClearButtonVisibility="WhileEditing" Style="{StaticResource EntryCpf_Senha}"/>
 
                     <Button x:Name="btn_entrar" Clicked="btn_entrar_Clicked" Text="Enviar" Grid.Row="5" Style="{StaticResource BotaoEntrar_Esqueci}" />
                     <Button x:Name="btn_esqueci" Clicked="btn_esqueci_Clicked" Text="Esqueci minha senha" Grid.Row="6" Style="{StaticResource BotaoEntrar_Esqueci}"/>
                 </Grid>
             </Frame>
-            
+
+            <Label Text="Ainda não tem uma conta?" TextColor="White" HorizontalTextAlignment="Center" FontSize="15" Margin="0, 15, 0, 0"/>
+            <Button x:Name="btn_cadastrar" Text="Clique aqui para se cadastrar" Clicked="btn_cadastrar_Clicked" BackgroundColor="Transparent" BorderWidth="2" BorderColor="White" CornerRadius="15" TextColor="White" Margin="50, 0, 50, 0"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
