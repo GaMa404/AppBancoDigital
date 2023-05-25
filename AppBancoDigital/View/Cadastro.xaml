@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppBancoDigital.View.Cadastro"
+              xmlns:control="clr-namespace:Xamarin.Forms.MaskedEntry;assembly=Xamarin.Forms.MaskedEntry"
              BackgroundColor="#00BFFF">
     <ContentPage.Content>
         
@@ -10,25 +11,25 @@
             <Label Text="MV BANK" FontSize="40" FontFamily="fonte_negrito" HorizontalTextAlignment="Center" TextColor="White" />
 
             <Frame BackgroundColor="Transparent" BorderColor="White" Margin="10" CornerRadius="15" Padding="10">
-                <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *">
+                <Grid RowDefinitions="*, *, *, *, *, *, *, *, *, *, *, *">
                     <Label Text="Cadastro" FontFamily="fonte_negrito" FontSize="30" Grid.Row="0" HorizontalTextAlignment="Center" FontAttributes="Bold" TextColor="White" />
 
                     <Label Text="Nome" FontSize="25" Grid.Row="1" TextColor="White" Margin="0, 20, 0, 0"/>
-                    <Entry x:Name="usuario" Placeholder="Digite seu CPF" Keyboard="Numeric" Grid.Row="2" PlaceholderColor="White" TextColor="White"/>
+                    <Entry x:Name="usuario" Placeholder="Digite seu nome" Grid.Row="2" PlaceholderColor="White" TextColor="White"/>
 
                     <Label Text="Email" FontSize="25" Grid.Row="3" TextColor="White"  Margin="0, 20, 0, 0"/>
-                    <Entry x:Name="email" Placeholder="Digite sua senha" Grid.Row="4" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Entry x:Name="email" Placeholder="Digite seu email" Keyboard="Email" Grid.Row="4" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
 
                     <Label Text="Data de nascimento" FontSize="25" Grid.Row="5" TextColor="White"  Margin="0, 20, 0, 0"/>
-                    <Entry x:Name="data_nasc" Placeholder="Digite sua data de nascimento" Grid.Row="6" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <DatePicker x:Name="dtpck_data_nascimento" Grid.Row="6" TextColor="White"/>
 
-                    <Label Text="CPF" FontSize="25" Grid.Row="7" TextColor="White"  Margin="0, 20, 0, 0"/>
-                    <Entry x:Name="cpf" Placeholder="Digite seu CPF" Grid.Row="8" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
+                    <Label Text="CPF" FontSize="25" Grid.Row="7" TextColor="White" Margin="0, 20, 0, 0"/>
+                    <control:MaskedEntry x:Name="cpf" Placeholder="Digite seu CPF" Grid.Row="8" Mask="XXX.XXX.XXX-XX" Keyboard="Numeric" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
 
                     <Label Text="Senha" FontSize="25" Grid.Row="9" TextColor="White"  Margin="0, 20, 0, 0"/>
-                    <Entry x:Name="senha" Placeholder="Digite sua senha" Grid.Row="10" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
-                    
-                    <Button x:Name="btn_cadastrar" Text="Cadastrar" Clicked="btn_cadastrar_Clicked" BackgroundColor="White" CornerRadius="15"
+                    <Entry x:Name="senha" Placeholder="Digite sua senha" Keyboard="Numeric" Grid.Row="10" PlaceholderColor="White" TextColor="White" ClearButtonVisibility="WhileEditing"/>
+
+                    <Button x:Name="btn_cadastrar" Text="Cadastrar" Clicked="btn_cadastrar_Clicked" Grid.Row="11" BackgroundColor="White" CornerRadius="15"/>
                 </Grid>
             </Frame>
         </StackLayout>

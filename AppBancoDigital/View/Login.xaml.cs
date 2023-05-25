@@ -78,9 +78,21 @@ namespace AppBancoDigital.View
             //App.Current.MainPage = new NavigationPage(new View.EsqueciSenha());
         }
 
-        private void btn_cadastrar_Clicked(object sender, EventArgs e)
+        private async void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
-            App.Current.MainPage = new NavigationPage(new View.Cadastro());
+            try
+            {
+                carregando.IsRunning = true;
+                App.Current.MainPage = new NavigationPage(new View.Cadastro());
+            }
+            catch (Exception err)
+            {
+                await DisplayAlert("Ops", err.Message, "OK");
+            }
+            finally
+            {
+                carregando.IsRunning = false;
+            };
         }
     }
 }

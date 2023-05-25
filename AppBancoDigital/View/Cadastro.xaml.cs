@@ -15,7 +15,8 @@ namespace AppBancoDigital.View
 		public Cadastro ()
 		{
 			InitializeComponent ();
-		}
+
+        }
 
         private void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
