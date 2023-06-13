@@ -6,6 +6,9 @@ namespace AppBancoDigital
 {
     public partial class App : Application
     {
+        public static Model.Correntista DadosCorrentista { get; set; }
+
+
         public App()
         {
             Device.SetFlags(new string[] { "AppTheme_Experimental" });
@@ -14,11 +17,11 @@ namespace AppBancoDigital
 
             if (Properties.ContainsKey("usuario_logado"))
             {
-                MainPage = new MainPage();
+                MainPage = new NavigationPage(new MainPage());
             }
             else
             {
-                MainPage = new View.Login();
+                MainPage = new NavigationPage (new View.Login());
             }
         }
 
