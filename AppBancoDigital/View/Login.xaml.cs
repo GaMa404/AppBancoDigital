@@ -61,11 +61,10 @@ namespace AppBancoDigital.View
                 {
                     DisplayAlert("Erro", "Dados incorretos!", "OK");
                 }
-
             }
             catch (Exception err)
             {
-                await DisplayAlert("Ops", err.Message, "OK");
+                await DisplayAlert(err.Message, err.StackTrace, "OK");
             }
             finally
             {
@@ -80,7 +79,8 @@ namespace AppBancoDigital.View
 
         private void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Cadastro());
+            //Navigation.PushAsync(new Cadastro());
+            Navigation.PushAsync(new NavigationPage(new Cadastro()));
         }
     }
 }

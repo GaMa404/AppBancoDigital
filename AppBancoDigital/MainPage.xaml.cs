@@ -28,7 +28,7 @@ namespace AppBancoDigital
             if (confirmar)
             {
                 App.Current.Properties.Remove("usuario_logado");
-                App.Current.MainPage = new Login();
+                App.Current.MainPage = new NavigationPage( new Login());
             }
         }
     }

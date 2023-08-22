@@ -18,12 +18,18 @@ namespace AppBancoDigital.View
 		public Cadastro ()
 		{
 			InitializeComponent ();
+
+            NavigationPage.SetHasNavigationBar(this, false);
+
+            carregando.Color = Color.White;
         }
 
         private async void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
 			try
 			{
+                carregando.IsRunning = true;
+
                 string[] cpf_pontuado = cpf.Text.Split('.', '-');
                 string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
 
@@ -37,12 +43,16 @@ namespace AppBancoDigital.View
 					Data_cadastro = DateTime.Now,
 				});
 
-				if (c.Id != null)
+				if (c != null)
 				{
 					App.DadosCorrentista = c;
 
-					await Navigation.PushAsync(new Conta());
-				}
+                    App.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    App.Current.MainPage = new NavigationPage(new MainPage()
+                    {
+                        BindingContext = c
+                    });
+                }
 				else
 				{
 					throw new Exception("Erro ao realizar cadastro");
@@ -50,8 +60,12 @@ namespace AppBancoDigital.View
 			}
 			catch(Exception err) 
 			{
-				await DisplayAlert("Erro", err.Message, "OK");
+				await DisplayAlert(err.Message, err.StackTrace, "OK");
 			}
+			finally
+			{
+                carregando.IsRunning = false;
+            }
         }
     }
 }

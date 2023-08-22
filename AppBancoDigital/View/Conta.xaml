@@ -27,7 +27,7 @@
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Saldo: R$ " />
-                        <Span Text="Bindar saldo" />
+                        <Span Text="{Binding Saldo}" />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
