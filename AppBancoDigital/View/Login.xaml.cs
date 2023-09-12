@@ -51,7 +51,10 @@ namespace AppBancoDigital.View
 
                 if (c != null)
                 {
-                    App.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    Application.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    Application.Current.Properties.Add("usuario_senha", senha_sha1);
+                    await Application.Current.SavePropertiesAsync();
+
                     App.Current.MainPage = new NavigationPage(new MainPage()
                     {
                         BindingContext = c

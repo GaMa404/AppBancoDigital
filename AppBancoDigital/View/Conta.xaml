@@ -5,46 +5,55 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame BackgroundColor="#00BFFF" Padding="0, 0, 0, 0">
-                <StackLayout HeightRequest="250">
-                    <Label FontSize="25" TextColor="White" Margin="10, 0, 0, 0">
+            <Frame BackgroundColor="#00BFFF" Padding="0">
+                <StackLayout HeightRequest="270">
+                    <Label FontSize="35" TextColor="White" Margin="10">
                         <Label.FormattedText>
                             <FormattedString>
                                 <Span Text="Olá, "/>
-                                <Span Text="{Binding Nome}" />
+                                <Span x:Name="lbl_nome" Text="" />
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
-                    
-                    <Frame BackgroundColor="#87CEFA" Margin="5" Padding="5" CornerRadius="50">
-                        <ImageButton x:Name="propaganda" CornerRadius="50" Aspect="Fill" />
+
+                    <Frame BackgroundColor="White" Margin="0, 0, 0, 0" Padding="5" CornerRadius="5">
+                        <ImageButton x:Name="propaganda" CornerRadius="10" Aspect="Fill" />
                     </Frame>
-                    <Label Text="Adquira agora seu cartão aproximação!" FontSize="15" TextColor="White" HorizontalTextAlignment="Center"/>
+
+                    <Label Text="Adquira agora seu cartão aproximação!" FontSize="15"  TextColor="White" HorizontalTextAlignment="Center"/>
                 </StackLayout>
             </Frame>
 
-            <Label TextColor="Black" HorizontalTextAlignment="Center" FontSize="30">
+            <Label TextColor="Black" FontAttributes="Bold" FontSize="35" Margin="10, 30, 30, 30">
                 <Label.FormattedText>
                     <FormattedString>
                         <Span Text="Saldo: R$ " />
-                        <Span Text="{Binding Saldo}" />
+                        <Span x:Name="lbl_saldo" Text="" />
                     </FormattedString>
                 </Label.FormattedText>
             </Label>
 
             <StackLayout>
-                <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="*, *" Margin="15">
-                    <ImageButton x:Name="imgbtn_pix" Grid.Column="0" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_pix_Clicked"/>
-                    <Label Text="Pix" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" HorizontalTextAlignment="Center"/>
+                <Grid ColumnDefinitions="*, *, *, *" RowDefinitions="*, *">
+                    <ImageButton x:Name="imgbtn_pix" Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent"  Clicked="imgbtn_pix_Clicked" 
+                                 BorderColor="Black" BorderWidth="2" VerticalOptions="Center" Padding="10" Margin="10" CornerRadius="15"/>
+                    <Label Text="Pix" Grid.Column="0" Grid.Row="1" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                           Margin="-40"/>
 
-                    <ImageButton x:Name="imgbtn_pagar" Grid.Column="1" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_pagar_Clicked"/>
-                    <Label Text="Pagar" Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="Black" />
+                    <ImageButton x:Name="imgbtn_pagar" Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent" Clicked="imgbtn_pagar_Clicked"
+                                 BorderColor="Black" BorderWidth="2" VerticalOptions="Center" Padding="10" Margin="10" CornerRadius="15"/>
+                    <Label Text="Pagar" Grid.Column="1" Grid.Row="1" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                           Margin="-40"/>
 
-                    <ImageButton x:Name="imgbtn_transferir" Grid.Column="2" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_transferir_Clicked"/>
-                    <Label Text="Transferir" Grid.Column="2"  Grid.Row="1" FontSize="20" TextColor="Black" />
+                    <ImageButton x:Name="imgbtn_transferir" Grid.Column="2" Grid.Row="0" BackgroundColor="Transparent" Clicked="imgbtn_transferir_Clicked"
+                                 BorderColor="Black" BorderWidth="2" VerticalOptions="Center" Padding="10" Margin="10" CornerRadius="15"/>
+                    <Label Text="Transferir" Grid.Column="2" Grid.Row="1" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                           Margin="-40"/>
 
-                    <ImageButton x:Name="imgbtn_depositar" Grid.Column="3" Grid.Row="0" Scale="0.5" BackgroundColor="Transparent" Margin="0, 0, 0, 100" Clicked="imgbtn_depositar_Clicked"/>
-                    <Label Text="Depositar" Grid.Column="3"  Grid.Row="1" FontSize="20" TextColor="Black" />
+                    <ImageButton x:Name="imgbtn_depositar" Grid.Column="3" Grid.Row="0" BackgroundColor="Transparent" Clicked="imgbtn_depositar_Clicked"
+                                 BorderColor="Black" BorderWidth="2" VerticalOptions="Center" Padding="10" Margin="10" CornerRadius="15"/>
+                    <Label Text="Depositar" Grid.Column="3" Grid.Row="1" FontSize="20" TextColor="Black" FontAttributes="Bold" HorizontalTextAlignment="Center"
+                           Margin="-40"/>
                 </Grid>
             </StackLayout>
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AppBancoDigital.Model;
+using AppBancoDigital.Service;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,22 @@ namespace AppBancoDigital.View
             imgbtn_pagar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.boleto_icon.png");
             imgbtn_transferir.Source = ImageSource.FromResource("AppBancoDigital.Imagens.transferir_icon.png");
             imgbtn_depositar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.depositar_icon.png");
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            string cpf_usuario = (string)Application.Current.Properties["usuario_logado"];
+            string senha_usuario = (string)Application.Current.Properties["usuario_senha"];
+
+            Correntista c = await DataServiceCorrentista.AutenticarCorrentista(new Correntista
+            {
+                Cpf = cpf_usuario,
+                Senha = senha_usuario
+            });
+
+            lbl_nome.Text = c.Nome.Split(' ')[0];
         }
 
         private void imgbtn_pix_Clicked(object sender, EventArgs e)

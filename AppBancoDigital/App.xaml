@@ -34,7 +34,7 @@
             </Style>
             
             <!-- TELA MENU HAMBURGUER ========================================================================= -->
-            
+
             <Style x:Key="BotaoLogout" TargetType="Button">
                 <Setter Property="CornerRadius" Value="50" />
                 <Setter Property="BorderWidth" Value="100" />
@@ -42,8 +42,6 @@
                 <Setter Property="FontAttributes" Value="Bold" />
                 <Setter Property="BackgroundColor" Value="White" />
             </Style>
-        
-            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

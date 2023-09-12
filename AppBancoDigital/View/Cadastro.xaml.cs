@@ -22,6 +22,8 @@ namespace AppBancoDigital.View
             NavigationPage.SetHasNavigationBar(this, false);
 
             carregando.Color = Color.White;
+
+			dtpck_data_nascimento.MaximumDate = DateTime.Today; 
         }
 
         private async void btn_cadastrar_Clicked(object sender, EventArgs e)
@@ -47,7 +49,10 @@ namespace AppBancoDigital.View
 				{
 					App.DadosCorrentista = c;
 
-                    App.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    Application.Current.Properties.Add("usuario_logado", cpf_digitado);
+                    Application.Current.Properties.Add("usuario_senha", senha);
+                    await Application.Current.SavePropertiesAsync();
+
                     App.Current.MainPage = new NavigationPage(new MainPage()
                     {
                         BindingContext = c

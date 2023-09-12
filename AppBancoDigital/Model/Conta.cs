@@ -12,7 +12,7 @@ namespace AppBancoDigital.Model
         public string Limite { get; set; }
         public string Tipo { get; set; }
         public string Senha { get; set; }
-        public string Data_abertura { get; set; }
+        public DateTime Data_abertura { get; set; }
         public int Id_correntista { get; set; } 
     }
 }
