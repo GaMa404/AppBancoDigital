@@ -33,9 +33,8 @@ namespace AppBancoDigital.View
 
                 string[] cpf_pontuado = usuario.Text.Split('.', '-');
                 string cpf_digitado = cpf_pontuado[0] + cpf_pontuado[1] + cpf_pontuado[2] + cpf_pontuado[3];
+                
                 string senha_digitada = senha.Text;
-
-
                 string senha_sha1;
                 using (var sha1 = new SHA1Managed())
                 {

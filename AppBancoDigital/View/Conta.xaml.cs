@@ -40,6 +40,19 @@ namespace AppBancoDigital.View
             });
 
             lbl_nome.Text = c.Nome.Split(' ')[0];
+
+            int id_correntista = c.Id;
+
+            ContaCorrentista cc = await DataServiceConta.BuscarDadosConta(new ContaCorrentista
+            {
+                Id_correntista = id_correntista
+            });
+
+            Console.WriteLine("=============================================================================");
+            Console.WriteLine(" ID CORRENTISTA ");
+            Console.WriteLine(cc.Id_correntista);
+            Console.WriteLine(" ");
+            Console.WriteLine("=============================================================================");
         }
 
         private void imgbtn_pix_Clicked(object sender, EventArgs e)

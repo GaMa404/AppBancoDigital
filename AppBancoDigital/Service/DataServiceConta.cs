@@ -9,9 +9,9 @@ namespace AppBancoDigital.Service
 {
     public class DataServiceConta : DataService
     {
-        public static async Task<Conta> BuscarDadosConta(Conta ct)
+        public static async Task<ContaCorrentista> BuscarDadosConta(ContaCorrentista cc)
         {
-            var json_a_enviar = JsonConvert.SerializeObject(ct);
+            var json_a_enviar = JsonConvert.SerializeObject(cc);
 
             Console.WriteLine("=============================================================================");
             Console.WriteLine(" ");
@@ -19,12 +19,12 @@ namespace AppBancoDigital.Service
             Console.WriteLine(" ");
             Console.WriteLine("=============================================================================");
 
-            string json = await DataService.PostDataToService(json_a_enviar, "/conta");
+            string json = await DataService.PostDataToService(json_a_enviar, "/conta/dados");
 
             if (json == "false")
                 return null;
 
-            Conta conta = JsonConvert.DeserializeObject<Conta>(json);
+            ContaCorrentista conta = JsonConvert.DeserializeObject<ContaCorrentista>(json);
 
             return conta;
         }
