@@ -48,11 +48,7 @@ namespace AppBancoDigital.View
                 Id_correntista = id_correntista
             });
 
-            Console.WriteLine("=============================================================================");
-            Console.WriteLine(" ID CORRENTISTA ");
-            Console.WriteLine(cc.Id_correntista);
-            Console.WriteLine(" ");
-            Console.WriteLine("=============================================================================");
+            lbl_saldo.Text = cc.Saldo;
         }
 
         private void imgbtn_pix_Clicked(object sender, EventArgs e)
