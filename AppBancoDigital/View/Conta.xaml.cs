@@ -26,7 +26,7 @@ namespace AppBancoDigital.View
             imgbtn_depositar.Source = ImageSource.FromResource("AppBancoDigital.Imagens.depositar_icon.png");
         }
 
-        protected override async void OnAppearing()
+        /*protected override async void OnAppearing()
         {
             base.OnAppearing();
 
@@ -49,7 +49,7 @@ namespace AppBancoDigital.View
             });
 
             lbl_saldo.Text = cc.Saldo;
-        }
+        }*/
 
         private void imgbtn_pix_Clicked(object sender, EventArgs e)
         {

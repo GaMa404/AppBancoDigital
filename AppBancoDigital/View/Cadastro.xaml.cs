@@ -44,33 +44,41 @@ namespace AppBancoDigital.View
                     senha_sha1 = string.Join("", senha_sha1.ToLower().Split('-'));
                 }
 
-                Correntista c = await DataServiceCorrentista.CadastrarCorrentista(new Correntista
+				Correntista c_cpf = await DataServiceCorrentista.VerificarCPF(new Correntista
 				{
-					Nome = usuario.Text,
-					Email = email.Text,
-					Data_nasc = dtpck_data_nascimento.Date,
-					Cpf = cpf_digitado,
-					Senha = senha.Text,
-					Data_cadastro = DateTime.Now,
+					Cpf = cpf_digitado
 				});
 
-				if (c != null)
+                if (c_cpf != null) 
 				{
-					App.DadosCorrentista = c;
-
-                    Application.Current.Properties.Add("usuario_logado", cpf_digitado);
-                    Application.Current.Properties.Add("usuario_senha", senha_sha1);
-                    await Application.Current.SavePropertiesAsync();
-
-                    App.Current.MainPage = new NavigationPage(new MainPage()
+                    Correntista c = await DataServiceCorrentista.CadastrarCorrentista(new Correntista
                     {
-                        BindingContext = c
+                        Nome = usuario.Text,
+                        Email = email.Text,
+                        Data_nasc = dtpck_data_nascimento.Date,
+                        Cpf = cpf_digitado,
+                        Senha = senha.Text,
+                        Data_cadastro = DateTime.Now,
                     });
-                }
-				else
-				{
-					throw new Exception("Erro ao realizar cadastro");
-				}
+
+                    if (c != null)
+                    {
+                        App.DadosCorrentista = c;
+
+                        Application.Current.Properties.Add("usuario_logado", cpf_digitado);
+                        Application.Current.Properties.Add("usuario_senha", senha_sha1);
+                        await Application.Current.SavePropertiesAsync();
+
+                        App.Current.MainPage = new NavigationPage(new MainPage()
+                        {
+                            BindingContext = c
+                        });
+                    }
+                    else
+                    {
+                        throw new Exception("Erro ao realizar cadastro");
+                    }
+                }    
 			}
 			catch(Exception err) 
 			{

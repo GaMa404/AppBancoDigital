@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppBancoDigital.View.Cadastro2"
+             BackgroundColor="#00BFFF">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="MV BANK" FontSize="40" FontFamily="fonte_negrito" HorizontalTextAlignment="Center" TextColor="White" />
+
+            <Label Text="Agora, informe um email para contato" TextColor="White" FontAttributes="Italic" FontSize="20" Margin="10, 30, 10, 0" HorizontalTextAlignment="Start"/>
+
+            <Label Text="Email: " TextColor="White" FontSize="35" Margin="10, 10, 10, 10"/>
+            <Entry x:Name="txt_email" Placeholder="Digite seu email" PlaceholderColor="White" TextColor="White" FontSize="30" Margin="10, -20, 0, 0"/>
+
+            <Button x:Name="btn_proximo" Text=">" TextColor="Black" BackgroundColor="White" Clicked="btn_proximo_Clicked" FontSize="30" CornerRadius="100" WidthRequest="80" HorizontalOptions="EndAndExpand" Margin="20" VerticalOptions="EndAndExpand"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

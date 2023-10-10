@@ -82,7 +82,7 @@ namespace AppBancoDigital.View
         private void btn_cadastrar_Clicked(object sender, EventArgs e)
         {
             //Navigation.PushAsync(new Cadastro());
-            Navigation.PushAsync(new NavigationPage(new Cadastro()));
+            Navigation.PushAsync(new Cadastro1());
         }
     }
 }
